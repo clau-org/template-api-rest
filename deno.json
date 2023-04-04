@@ -1,5 +1,6 @@
 {
-  "version": "0.0.1",
+  "name": "<NAME>",
+  "version": "0.0.0",
   "tasks": {
     "dev": "deno run -A --watch src/main.ts",
     "test": "deno test -A",

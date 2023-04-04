@@ -3,7 +3,7 @@ import config from "../config.ts";
 import { hello as helloMiddleware } from "../middlewares/hello.ts";
 
 // Extract name from config
-const { name } = config;
+const { name, version } = config;
 
 // Create a new router instance
 const hello = new ApiRouter();
@@ -16,6 +16,8 @@ hello.all("/", helloMiddleware, async (ctx) => {
 
   ctx.response.body = {
     message: `Hello from ${name}`,
+    name,
+    version,
   };
 });
 
